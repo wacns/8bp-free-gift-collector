@@ -181,12 +181,17 @@ const resolveImageUrl = async (productElement) => {
 export const collectRewards = async (userUniqueID) => {
   const pageUrl = "https://8ballpool.com/en/shop";
   const delay = 100;
-  const BROWSER_ARGS = ["--no-sandbox", "--disable-setuid-sandbox"];
+  const BROWSER_ARGS = [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-gpu",
+    "--disable-dev-shm-usage",
+  ];
   const TIMEOUT = 15000;
 
   logger("debug", "🚀 Launching browser...");
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: "shell",
     slowMo: delay,
     args: BROWSER_ARGS,
   });
