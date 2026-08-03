@@ -22,3 +22,4 @@
 
 | Date | Rewards |
 | :---: | :---: |
+| 8/3/2026 | <img src="https://prod-hub-config.8ballpool.com/assets/9c3on9Ay37VxqarH5JWtZSSm3RwWI0WkGBvWT8K6w7WwyCHjK77B3rKsSkIodsXeMuXHBn-12mZIwpOx9Pwnzw~KUwhB6gLKSYWKxGDA22_QOkH9q1UJfC3KUBmQ3EEmYI.png" height="25" alt="Bronze Random Collection Box"/> Bronze Random Collection Box x1; <img src="https://prod-hub-config.8ballpool.com/assets/uew70LP1xb3fHZ8xtHSMRjEDW6rQ-cY3eRnnLRVJ5PBkhlO70MdgREScjjHMEG3N3FfsdgoJReO2lQIBmWkjLA~ENU5GRG4OIdHfBvOoxa5uTu2UabVzPAuR6xkk5SJypA.png" height="25" alt="Strike Zone Cue Piece"/> Strike Zone Cue Piece x1 |
