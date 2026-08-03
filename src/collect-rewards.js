@@ -186,7 +186,7 @@ export const collectRewards = async (userUniqueID) => {
 
   logger("debug", "🚀 Launching browser...");
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     slowMo: delay,
     args: BROWSER_ARGS,
   });
