@@ -3,6 +3,175 @@ import puppeteer from "puppeteer";
 import { logger } from "./logger.js";
 import { makeRewardData } from "./utils.js";
 
+const waitForVisibleButtonByText = async (page, texts, timeout) => {
+  const handle = await page.waitForFunction(
+    (labels) => {
+      const isVisible = (element) => {
+        const style = window.getComputedStyle(element);
+        return (
+          style &&
+          style.display !== "none" &&
+          style.visibility !== "hidden" &&
+          element.getClientRects().length > 0
+        );
+      };
+      const buttons = [...document.querySelectorAll("button")];
+      const normalize = (value) =>
+        (value || "").replace(/\s+/g, " ").trim().toLowerCase();
+
+      for (const label of labels) {
+        const target = normalize(label);
+        const button = buttons.find(
+          (candidate) =>
+            isVisible(candidate) && normalize(candidate.textContent) === target
+        );
+
+        if (button) {
+          return button;
+        }
+      }
+
+      return null;
+    },
+    { timeout },
+    texts
+  );
+
+  return handle.asElement();
+};
+
+const waitForVisibleInput = async (page, timeout) => {
+  const handle = await page.waitForFunction(
+    () => {
+      const isVisible = (element) => {
+        const style = window.getComputedStyle(element);
+        return (
+          style &&
+          style.display !== "none" &&
+          style.visibility !== "hidden" &&
+          element.getClientRects().length > 0
+        );
+      };
+      const inputs = [...document.querySelectorAll("input")];
+      const input = inputs.find((candidate) => isVisible(candidate));
+      return input || null;
+    },
+    { timeout }
+  );
+
+  return handle.asElement();
+};
+
+const resolveImageUrl = async (productElement) => {
+  return productElement.evaluate((root) => {
+    const toAbsoluteUrl = (value) => {
+      if (!value) {
+        return null;
+      }
+
+      const trimmed = value.trim();
+      if (!trimmed || trimmed.startsWith("data:") || trimmed.startsWith("blob:")) {
+        return null;
+      }
+
+      try {
+        return new URL(trimmed, document.baseURI).href;
+      } catch {
+        return null;
+      }
+    };
+
+    const fromSrcset = (value) => {
+      if (!value) {
+        return null;
+      }
+
+      const candidates = value
+        .split(",")
+        .map((entry) => entry.trim().split(/\s+/)[0])
+        .filter(Boolean)
+        .reverse();
+
+      for (const candidate of candidates) {
+        const resolved = toAbsoluteUrl(candidate);
+        if (resolved) {
+          return resolved;
+        }
+      }
+
+      return null;
+    };
+
+    const extractBackgroundUrl = (element) => {
+      if (!element) {
+        return null;
+      }
+
+      const backgroundImage = window.getComputedStyle(element).backgroundImage;
+      if (!backgroundImage || backgroundImage === "none") {
+        return null;
+      }
+
+      const match = backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+      return match ? toAbsoluteUrl(match[1]) : null;
+    };
+
+    const imageSelectors = [
+      ".item-image img",
+      ".bundle-item__icons img",
+      'img[alt="Item Image"]',
+      ".single-card img",
+      ".bundle-card img",
+      "img",
+    ];
+
+    for (const selector of imageSelectors) {
+      for (const img of root.querySelectorAll(selector)) {
+        const attributes = [
+          img.currentSrc,
+          img.getAttribute("src"),
+          img.getAttribute("data-src"),
+          img.getAttribute("data-lazy-src"),
+          img.getAttribute("data-original"),
+        ];
+
+        for (const attribute of attributes) {
+          const resolved = toAbsoluteUrl(attribute);
+          if (resolved) {
+            return resolved;
+          }
+        }
+
+        const srcset =
+          fromSrcset(img.getAttribute("srcset")) ||
+          fromSrcset(img.getAttribute("data-srcset"));
+        if (srcset) {
+          return srcset;
+        }
+      }
+    }
+
+    const backgroundSelectors = [
+      ".item-image",
+      ".bundle-item__icons",
+      ".single-card",
+      ".bundle-card",
+      ".product-card",
+      ".product-list-item",
+    ];
+
+    for (const selector of backgroundSelectors) {
+      const target = root.querySelector(selector);
+      const resolved = extractBackgroundUrl(target);
+      if (resolved) {
+        return resolved;
+      }
+    }
+
+    return extractBackgroundUrl(root);
+  });
+};
+
 /**
  *
  * @param {string} userUniqueID
@@ -17,7 +186,7 @@ export const collectRewards = async (userUniqueID) => {
 
   logger("debug", "🚀 Launching browser...");
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     slowMo: delay,
     args: BROWSER_ARGS,
   });
@@ -30,41 +199,33 @@ export const collectRewards = async (userUniqueID) => {
   await page.goto(pageUrl, { waitUntil: "networkidle2" });
   logger("debug", `✅ Navigation complete, waiting for login button.`);
 
-  const LOGIN_SELECTOR = 'xpath//html/body/div[1]/div/div[1]/div/div[2]/header/div[3]/div/button[1]';
-  logger("debug", `⏳ Waiting for selector: ${LOGIN_SELECTOR} (Timeout: ${TIMEOUT}ms)`);
-  
-  const loginButton = await page.waitForSelector(
-    LOGIN_SELECTOR,
-    { visible: true, timeout: TIMEOUT }
-  );
+  const loginButton = await waitForVisibleButtonByText(page, ["Login"], TIMEOUT);
 
   if (loginButton) {
     logger("debug", "🔍 Login button found, clicking.");
     await loginButton.click();
-    
-    // Campo de Input
-    const INPUT_ID_SELECTOR = 'xpath//html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div/form/div[2]/div[1]/input';
-    logger("debug", `⏳ Waiting for input selector: ${INPUT_ID_SELECTOR} (Timeout: ${TIMEOUT}ms)`);
-    
-    await page.waitForSelector(INPUT_ID_SELECTOR, { visible: true, timeout: TIMEOUT });
-    
-    await page.type(INPUT_ID_SELECTOR, userUniqueID, {
-      delay,
-    });
-    
-    // ATUALIZADO: Usando o novo XPath absoluto para o botão "Go"
-    const GO_SELECTOR = 'xpath//html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div/form/div[2]/div[2]/button';
-    logger("debug", `⏳ Waiting for selector: ${GO_SELECTOR}`);
-    
-    const goButton = await page.waitForSelector(
-      GO_SELECTOR,
-      { visible: true, timeout: TIMEOUT }
+
+    const input = await waitForVisibleInput(page, TIMEOUT);
+    if (!input) {
+      throw new Error("Unable to find login input.");
+    }
+
+    await input.click({ clickCount: 3 });
+    await input.type(userUniqueID, { delay });
+
+    const goButton = await waitForVisibleButtonByText(
+      page,
+      ["Go", "Continue", "Submit"],
+      TIMEOUT
     );
+    if (!goButton) {
+      throw new Error("Unable to find login submit button.");
+    }
+
     await goButton.click();
     logger("success", "✅ User logged in.");
   } else {
-    logger("error", "❌ Login button not found.");
-    throw new Error("Unable to login.");
+    logger("warn", "⚠️ Login button not found. Continuing without login.");
   }
 
   let rewards = [];
@@ -83,8 +244,7 @@ export const collectRewards = async (userUniqueID) => {
       el.textContent.trim().toUpperCase()
     );
 
-    const imageElement = await product.$("img");
-    const imageSrc = await imageElement.evaluate((i) => i.getAttribute("src"));
+    const imageSrc = await resolveImageUrl(product);
 
     const nameElement = await product.$("h3");
     const name = await nameElement.evaluate((el) => el.textContent.trim());

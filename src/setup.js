@@ -12,7 +12,12 @@ rl.close();
 
 await fs.writeFile("src/username.txt", userUniqueID);
 
-await fs.rm("archive", { recursive: true });
+await fs.rm("archive", { recursive: true, force: true });
+await fs.mkdir("archive", { recursive: true });
+await fs.writeFile(
+  "archive/README.md",
+  "# Archive\n\nMonthly archived README snapshots are stored here as `MM-YYYY.md` files.\n"
+);
 
 const exampleReadme = await fs.readFile("README.example.md", "utf8");
 await fs.writeFile("README.md", exampleReadme);

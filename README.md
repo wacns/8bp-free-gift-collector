@@ -1,43 +1,24 @@
-<p align="center">
-  <img src="https://github.com/aditeyaS/8bp-free-gift-collector/blob/main/8bplogo.png" height="10%" />
-  <h2 align="center">8 Ball Pool Free Gift Collector</h3>
-  <p align="center">The <a href="https://8ballpool.com/en/shop" target="_blank">8 ball pool webiste</a> has free gifts everyday. This script collects those.</p>
-  <h4 align="center">Created by <a href="https://github.com/aditeyaS" target="_blank">@aditeyaS</a></h4>
-  <div>
-    <h4 align="center">Tech Stack</h4>
-    <p align="center">
-      <img height="40" width="40" src="https://cdn.simpleicons.org/javascript/F7DF1E" />
-      <img height="40" width="40" src="https://cdn.simpleicons.org/puppeteer/40B5A4" />
-      <img height="40" width="40" src="https://cdn.simpleicons.org/githubactions/2088FF" />
-    </p>
-  </div>
-  <p align="center">
+<div>
+  <img src="https://github.com/wacns/8bp-free-gift-collector/raw/main/8bplogo.png" alt="8 Ball Pool Free Gift Collector logo" height="10%" />
+  <h2>8 Ball Pool Free Gift Collector</h2>
+  <p>The <a href="https://8ballpool.com/en/shop" target="_blank">8 ball pool website</a> has free gifts everyday. This script collects those.</p>
+  <h4>Tech Stack</h4>
+  <p>
+    <img height="40" width="40" src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" />
+    <img height="40" width="40" src="https://cdn.simpleicons.org/puppeteer/40B5A4" alt="Puppeteer" />
+    <img height="40" width="40" src="https://cdn.simpleicons.org/githubactions/2088FF" alt="GitHub Actions" />
+  </p>
+  <p>
     <a href="SETUP.md" aria-label="View previous rewards">
-        <img src="https://img.shields.io/badge/Deploy_your_script-ff0000?style=for-the-badge&logo=probot&logoColor=ffffff&logoSize=auto"/>
+      <img src="https://img.shields.io/badge/Deploy_your_script-ff0000?style=for-the-badge&logo=probot&logoColor=ffffff&logoSize=auto" alt="Deploy your script badge" />
     </a>
   </p>
-  <p align="center">
-    <a href="archive" aria-label="View previous rewards">
+  <p>
+    <a href="archive/README.md" aria-label="View previous rewards">
       View previous rewards
     </a>
   </p>
-</p>
+</div>
 
 | Date | Rewards |
 | :---: | :---: |
-| 10/1/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/hfnLBsCjSJyiu8-0Wl1XxAuEKlSY3iaZoWiLNVUVsLdlSyxKfFRzmP9wK6_yWQWgx0ZQItRGzxB9IHeKRU-8vQ~VQ2Mlb6C6Udx5JOq7cvhbk4dbtThx35yFSu0ulBXecA.png" height="25" alt="Daily Reward - 10/1"/> Daily Reward - 10/1 x30; <img src="https://prod-hub-config.8ballpool.com/assets/8PI4-d_WCdZfX89MjpTDzhvZExiSs82ceYsV3TPfPrBD7Zjbrai0rqGWpaBnBKerusaWXi6G3FBR3FHmaATb_Q~gK2G3yYltIZcfsuN4lhxXVq-ktHacK_yO3ac-N6McFA.png" height="25" alt="Legacy Strike Cue Piece"/> Legacy Strike Cue Piece x1 |
-| 10/2/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/R29eMeHWkCClPAueGXWtocHfqsI_xo2V65IKKZ77GH_3S3MgE30KaeXOb1R0AADRZsi9Ao38aYgZTMgs_XF-KQ~wuj2DPSrDRLAv1VVAHcghXwLTyP384pVUQTfGuPPZcA.png" height="25" alt="Daily Reward - 10/2"/> Daily Reward - 10/2 1; <img src="https://prod-hub-config.8ballpool.com/assets/kRJ26qKDdiBr7BhDRql2WrGCjCeFmptmjEUzSV4nyT6IGfVzTv-8-r-Q-BRtkWB-VvofUc7CY9ifbsxldEok0Q~sNj_SHAvyngabQPPIdbDvVfHJL_RJMjZugE2GipYfyE.png" height="25" alt="Spin Wizard Cue Piece"/> Spin Wizard Cue Piece x1 |
-| 10/3/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/9TJxckNAbgx81BoWBGVH0gz3HDNirkQ__rTaMDA7NDbPG1qtTq2RnRfsK5i5giQtOCi3C3HDLfpodN2C2xEj2g~uhI0TW2W3UEbpvnxAAxFV8ZdvwKBWRsfgVJ8TJDLR80.png" height="25" alt="Daily Reward - 10/3"/> Daily Reward - 10/3 x1; <img src="https://prod-hub-config.8ballpool.com/assets/uew70LP1xb3fHZ8xtHSMRjEDW6rQ-cY3eRnnLRVJ5PBkhlO70MdgREScjjHMEG3N3FfsdgoJReO2lQIBmWkjLA~ENU5GRG4OIdHfBvOoxa5uTu2UabVzPAuR6xkk5SJypA.png" height="25" alt="Strike Zone Cue Piece"/> Strike Zone Cue Piece x2 |
-| 10/4/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/R29eMeHWkCClPAueGXWtocHfqsI_xo2V65IKKZ77GH_3S3MgE30KaeXOb1R0AADRZsi9Ao38aYgZTMgs_XF-KQ~wuj2DPSrDRLAv1VVAHcghXwLTyP384pVUQTfGuPPZcA.png" height="25" alt="Daily Reward - 10/4"/> Daily Reward - 10/4 1; <img src="https://prod-hub-config.8ballpool.com/assets/Psx-E7uPYsPupGj0nxmL-ggEUzHn-7lsgkMAwlcVF4gwPZSN_a8mgloScb-GG-vdGTPe2BGN48s55voNCggOwg~AFzNC1iBF6kM5VF7z3TAuOb6gNgagPGTHZUH3ViCTlg.png" height="25" alt="Opti Shot Cue Piece"/> Opti Shot Cue Piece x1 |
-| 10/5/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/p9hWBOMuwo-ex0zYODhD5jywVf1VHo-o8OFS41eoK5YUqtoqhPidSyUo3tbAswKm_XiekQs1Lxppj6YHWm3nKw~hrG-2xTEIWECsD2RC0ed3mdh8_VS4wI6j22u_4HxtUk.png" height="25" alt="Daily Reward - 10/5"/> Daily Reward - 10/5 x1; <img src="https://prod-hub-config.8ballpool.com/assets/UUZQQ1BQT1dFUkJSRUFLfGh0dHBzOi8vdjU2LW1vYmlsZS1saXZlLWNvbmZpZy5wb29sLm1pbmljbGlwcHQuY29tL2NsaWVudC80MC9TaG9wX1Bvd2VyX0JyZWFrX0N1ZS5wbmc.png" height="25" alt="Power Break Cue Piece"/> Power Break Cue Piece x1 |
-| 10/16/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/R29eMeHWkCClPAueGXWtocHfqsI_xo2V65IKKZ77GH_3S3MgE30KaeXOb1R0AADRZsi9Ao38aYgZTMgs_XF-KQ~wuj2DPSrDRLAv1VVAHcghXwLTyP384pVUQTfGuPPZcA.png" height="25" alt="Daily Reward - 10/16"/> Daily Reward - 10/16 1; <img src="https://prod-hub-config.8ballpool.com/assets/UUZQQ1BQT1dFUkJSRUFLfGh0dHBzOi8vdjU2LW1vYmlsZS1saXZlLWNvbmZpZy5wb29sLm1pbmljbGlwcHQuY29tL2NsaWVudC80MC9TaG9wX1Bvd2VyX0JyZWFrX0N1ZS5wbmc.png" height="25" alt="Power Break Cue Piece"/> Power Break Cue Piece x1 |
-| 10/17/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/9c3on9Ay37VxqarH5JWtZSSm3RwWI0WkGBvWT8K6w7WwyCHjK77B3rKsSkIodsXeMuXHBn-12mZIwpOx9Pwnzw~KUwhB6gLKSYWKxGDA22_QOkH9q1UJfC3KUBmQ3EEmYI.png" height="25" alt="Daily Reward - 10/17"/> Daily Reward - 10/17 x1; <img src="https://prod-hub-config.8ballpool.com/assets/gfAwKYBs_hqq_Su7FRAUAFxbgI5Gx0kdx__P8u2kewXDUik6XCodC8Wf_TOaHFrt_EbYIi5xt1AA2xwY8QCueQ~IiSrrgA2lgrL2fRsW62I5UYetQYmw-rdPum9EzVKL8g.png" height="25" alt="Gamechanger Cue Piece"/> Gamechanger Cue Piece x2 |
-| 10/18/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/MssvLufhzIJXO2C1pX0lyE6MF6fdwnOharBZMf5onDv2u1TZJS8wMmbhkJABxTj9-IdMak3teoWzMdCZwuTEdA~U5GQxQzLklossQD0nNWNLjQZeWVRWSeBdjp8zWKYtKk.png" height="25" alt="Daily Reward - 10/18"/> Daily Reward - 10/18 500; <img src="https://prod-hub-config.8ballpool.com/assets/Psx-E7uPYsPupGj0nxmL-ggEUzHn-7lsgkMAwlcVF4gwPZSN_a8mgloScb-GG-vdGTPe2BGN48s55voNCggOwg~AFzNC1iBF6kM5VF7z3TAuOb6gNgagPGTHZUH3ViCTlg.png" height="25" alt="Opti Shot Cue Piece"/> Opti Shot Cue Piece x1 |
-| 10/19/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/x6K0i7RwxyzJGE_nopivCfU1HGaFJvzonC2htNJdPL5AoHA1fiTWhjqYk7QsBpQuL6hdjPe_cLXjLjnMHXXBsg~kz-NG1xudvrE96XzoioHYniSdsgJ04L4KUY_EUJxI8I.png" height="25" alt="Daily Reward - 10/19"/> Daily Reward - 10/19 x1; <img src="https://prod-hub-config.8ballpool.com/assets/gfAwKYBs_hqq_Su7FRAUAFxbgI5Gx0kdx__P8u2kewXDUik6XCodC8Wf_TOaHFrt_EbYIi5xt1AA2xwY8QCueQ~IiSrrgA2lgrL2fRsW62I5UYetQYmw-rdPum9EzVKL8g.png" height="25" alt="Gamechanger Cue Piece"/> Gamechanger Cue Piece x1 |
-| 10/20/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/MssvLufhzIJXO2C1pX0lyE6MF6fdwnOharBZMf5onDv2u1TZJS8wMmbhkJABxTj9-IdMak3teoWzMdCZwuTEdA~U5GQxQzLklossQD0nNWNLjQZeWVRWSeBdjp8zWKYtKk.png" height="25" alt="Daily Reward - 10/20"/> Daily Reward - 10/20 500; <img src="https://prod-hub-config.8ballpool.com/assets/uew70LP1xb3fHZ8xtHSMRjEDW6rQ-cY3eRnnLRVJ5PBkhlO70MdgREScjjHMEG3N3FfsdgoJReO2lQIBmWkjLA~ENU5GRG4OIdHfBvOoxa5uTu2UabVzPAuR6xkk5SJypA.png" height="25" alt="Strike Zone Cue Piece"/> Strike Zone Cue Piece x1 |
-| 10/21/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/9TJxckNAbgx81BoWBGVH0gz3HDNirkQ__rTaMDA7NDbPG1qtTq2RnRfsK5i5giQtOCi3C3HDLfpodN2C2xEj2g~uhI0TW2W3UEbpvnxAAxFV8ZdvwKBWRsfgVJ8TJDLR80.png" height="25" alt="Daily Reward - 10/21"/> Daily Reward - 10/21 x1; <img src="https://prod-hub-config.8ballpool.com/assets/32jsniAyJp8Koi0nFarCqcjJ-v6oYuYEOVFx9DXCYi5dv7VvjPsgr9KH5DqUw3FMCWpYi66hIABPEO7obsXx-w~syawBUG7v9ZD3_1GoYhQWWK3heuF82at1vhrtd87Dxs.png" height="25" alt="Trickster Cue Piece"/> Trickster Cue Piece x1 |
-| 10/22/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/MssvLufhzIJXO2C1pX0lyE6MF6fdwnOharBZMf5onDv2u1TZJS8wMmbhkJABxTj9-IdMak3teoWzMdCZwuTEdA~U5GQxQzLklossQD0nNWNLjQZeWVRWSeBdjp8zWKYtKk.png" height="25" alt="Daily Reward - 10/22"/> Daily Reward - 10/22 500; <img src="https://prod-hub-config.8ballpool.com/assets/kRJ26qKDdiBr7BhDRql2WrGCjCeFmptmjEUzSV4nyT6IGfVzTv-8-r-Q-BRtkWB-VvofUc7CY9ifbsxldEok0Q~sNj_SHAvyngabQPPIdbDvVfHJL_RJMjZugE2GipYfyE.png" height="25" alt="Spin Wizard Cue Piece"/> Spin Wizard Cue Piece x1 |
-| 10/27/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/MssvLufhzIJXO2C1pX0lyE6MF6fdwnOharBZMf5onDv2u1TZJS8wMmbhkJABxTj9-IdMak3teoWzMdCZwuTEdA~U5GQxQzLklossQD0nNWNLjQZeWVRWSeBdjp8zWKYtKk.png" height="25" alt="Daily Reward - 10/27"/> Daily Reward - 10/27 500; <img src="https://prod-hub-config.8ballpool.com/assets/gfAwKYBs_hqq_Su7FRAUAFxbgI5Gx0kdx__P8u2kewXDUik6XCodC8Wf_TOaHFrt_EbYIi5xt1AA2xwY8QCueQ~IiSrrgA2lgrL2fRsW62I5UYetQYmw-rdPum9EzVKL8g.png" height="25" alt="Gamechanger Cue Piece"/> Gamechanger Cue Piece x1 |
-| 10/28/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/R29eMeHWkCClPAueGXWtocHfqsI_xo2V65IKKZ77GH_3S3MgE30KaeXOb1R0AADRZsi9Ao38aYgZTMgs_XF-KQ~wuj2DPSrDRLAv1VVAHcghXwLTyP384pVUQTfGuPPZcA.png" height="25" alt="Daily Reward - 10/28"/> Daily Reward - 10/28 1; <img src="https://prod-hub-config.8ballpool.com/assets/UUZQQ1BQT1dFUkJSRUFLfGh0dHBzOi8vdjU2LW1vYmlsZS1saXZlLWNvbmZpZy5wb29sLm1pbmljbGlwcHQuY29tL2NsaWVudC80MC9TaG9wX1Bvd2VyX0JyZWFrX0N1ZS5wbmc.png" height="25" alt="Power Break Cue Piece"/> Power Break Cue Piece x1 |
-| 11/2/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/p9hWBOMuwo-ex0zYODhD5jywVf1VHo-o8OFS41eoK5YUqtoqhPidSyUo3tbAswKm_XiekQs1Lxppj6YHWm3nKw~hrG-2xTEIWECsD2RC0ed3mdh8_VS4wI6j22u_4HxtUk.png" height="25" alt="Daily Reward - 11/2"/> Daily Reward - 11/2 x1; <img src="https://prod-hub-config.8ballpool.com/assets/kRJ26qKDdiBr7BhDRql2WrGCjCeFmptmjEUzSV4nyT6IGfVzTv-8-r-Q-BRtkWB-VvofUc7CY9ifbsxldEok0Q~sNj_SHAvyngabQPPIdbDvVfHJL_RJMjZugE2GipYfyE.png" height="25" alt="Spin Wizard Cue Piece"/> Spin Wizard Cue Piece x1 |
-| 11/4/2025 | <img src="https://prod-hub-config.8ballpool.com/assets/QPTrYJf8WejEF2xZtedtxyj0w9GZpa0aUHPQOgLksmBwFkUefPsOdA59Nj4MuWPOcHbRGnYT2-9j0xlv18FjGQ~5xKxshXNbluTrT9OAhWtO8WPPgVU-R4EbY0Jr6cCxHM.png" height="25" alt="Daily Reward - 11/4"/> Daily Reward - 11/4 x1; <img src="https://prod-hub-config.8ballpool.com/assets/8PI4-d_WCdZfX89MjpTDzhvZExiSs82ceYsV3TPfPrBD7Zjbrai0rqGWpaBnBKerusaWXi6G3FBR3FHmaATb_Q~gK2G3yYltIZcfsuN4lhxXVq-ktHacK_yO3ac-N6McFA.png" height="25" alt="Legacy Strike Cue Piece"/> Legacy Strike Cue Piece x1 |

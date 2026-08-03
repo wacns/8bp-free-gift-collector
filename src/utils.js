@@ -6,7 +6,11 @@
  *
  */
 export const makeRewardData = (imageSrc, name, quantity) => {
-  return `<img src="${imageSrc}" height="25" alt="${name}"/> ${name} ${quantity}`;
+  const imageMarkup = imageSrc
+    ? `<img src="${imageSrc}" height="25" alt="${name}"/> `
+    : "";
+
+  return `${imageMarkup}${name} ${quantity}`.trim();
 };
 
 /**
