@@ -24,7 +24,7 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: npm i
-      - name: Claim gifts and update REWARDS.md
+      - name: Claim gifts and update README.md
         run: npm run start
       - name: Commit and push
         env:

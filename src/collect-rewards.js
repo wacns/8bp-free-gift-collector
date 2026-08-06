@@ -192,10 +192,14 @@ export const collectRewards = async (userUniqueID) => {
   logger("debug", "🚀 Launching browser...");
   const browser = await puppeteer.launch({
     headless: "shell",
+    // headless: false,
     slowMo: delay,
     args: BROWSER_ARGS,
   });
   const page = await browser.newPage();
+  const client = await page.createCDPSession();
+  await client.send("Network.clearBrowserCache");
+  await client.send("Network.clearBrowserCookies");
   await page.setUserAgent(
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
   );
