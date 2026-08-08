@@ -5,7 +5,7 @@ on:
     # 03:43 UTC = 06:43 Arab Standard Time. Deliberately off the top of the
     # hour and ~1h early: GitHub queues scheduled runs and "0 5" is the most
     # contended slot (2026-08-04 ran 2h32m late), so this absorbs the drift.
-    - cron: "43 3 * * *"
+    - cron: "43 7 * * *"
   workflow_dispatch:
 
 permissions:
