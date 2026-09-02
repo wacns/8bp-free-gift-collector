@@ -23,3 +23,4 @@
 | Date | Rewards |
 | :---: | :---: |
 | 9/1/2026 | <img src="https://prod-hub-config.8ballpool.com/assets/9TJxckNAbgx81BoWBGVH0gz3HDNirkQ__rTaMDA7NDbPG1qtTq2RnRfsK5i5giQtOCi3C3HDLfpodN2C2xEj2g~uhI0TW2W3UEbpvnxAAxFV8ZdvwKBWRsfgVJ8TJDLR80.png" height="25" alt="Daily Reward - 9/1"/> Daily Reward - 9/1 x1 |
+| 9/2/2026 | <img src="https://prod-hub-config.8ballpool.com/assets/p9hWBOMuwo-ex0zYODhD5jywVf1VHo-o8OFS41eoK5YUqtoqhPidSyUo3tbAswKm_XiekQs1Lxppj6YHWm3nKw~hrG-2xTEIWECsD2RC0ed3mdh8_VS4wI6j22u_4HxtUk.png" height="25" alt="Daily Reward - 9/2"/> Daily Reward - 9/2 x1 |
